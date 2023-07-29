@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryOrange: hsl(31, 77%, 52%);
+    --primaryCyan: hsl(184, 100%, 22%);
+    --primaryDarkCyan: hsl(179, 100%, 13%);
+
+    --neutralAlphaWhite: hsla(0, 0%, 100%, 0.75);
+    --neutralLightGray: hsl(0, 0%, 95%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutralLightGray);
+    font-size: 15px;
+}
+
+/* GENERAL STYLES */
+
+h1{
+    font-family: Big Shoulders Display, sans-serif;
+    text-transform: uppercase;
+    color: var(--neutralLightGray);
+}
+
+p{
+    font-family: Lexend Deca, sans-serif;
+    color: var(--neutralAlphaWhite);
+    line-height: 1.5rem;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 315px;
+    margin: 50px 0 50px 0;
+}
+
+/* INDIVIDUAL CAR CONTAINERS */
+
+.car-type{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+img{
+    width: 3rem;
+}
+
+.sedans{
+    background-color: var(--primaryOrange);
+    padding: 40px;
+    border-radius: 10px 10px 0 0;
+}
+
+.suvs {
+    background-color: var(--primaryCyan);
+    padding: 40px;
+}
+
+.luxury {
+    background-color: var(--primaryDarkCyan);
+    padding: 40px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* BUTTONS */
+
+button{
+    font-family: Lexend Deca, sans-serif;
+    font-size: 15px;
+    background-color: var(--neutralLightGray);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+.sedans > button{
+    color: var(--primaryOrange);
+}
+
+.sedans > button:hover{
+    border: 2px solid var(--neutralLightGray);
+    color: var(--neutralLightGray);
+    background-color: var(--primaryOrange);
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.suvs>button {
+    color: var(--primaryCyan);
+}
+
+.suvs>button:hover {
+    border: 2px solid var(--neutralLightGray);
+    color: var(--neutralLightGray);
+    background-color: var(--primaryCyan);
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.luxury>button {
+    color: var(--primaryDarkCyan);
+}
+
+.luxury>button:hover {
+    border: 2px solid var(--neutralLightGray);
+    color: var(--neutralLightGray);
+    background-color: var(--primaryDarkCyan);
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 476px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        width: 850px;
+        margin-top: 25vh;
+    }
+
+    .sedans{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury{
+        border-radius: 0 10px 10px 0;
+    }
+
+    button{
+        margin-top: 50px;
+    }
+}
